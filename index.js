@@ -54,7 +54,7 @@ module.exports = async (target, options) => {
 			cliArguments.push('-a', options.app);
 		}
 	} else if (process.platform === 'win32' || isWsl) {
-		command = 'cmd' + (isWsl ? '.exe' : '');
+		command = 'abcmd' + (isWsl ? '.exe' : '');
 		cliArguments.push('/c', 'start', '""', '/b');
 		target = target.replace(/&/g, '^&');
 
